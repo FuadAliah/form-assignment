@@ -1,0 +1,23 @@
+.e-input-group input.e-input, .e-float-input.e-input-group input, .e-input-group.e-control-wrapper input.e-input, .e-float-input.e-input-group.e-control-wrapper input, .e-float-input input, .e-float-input.e-control-wrapper input {
+    min-height: 48px;
+    margin-bottom: 6px;
+}
+
+.e-input-group{
+    position: relative;
+}
+
+.e-input-group-icon{
+    background: url("../imgs/calendar.svg") no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-position: center center;
+    cursor: pointer;
+}
+
+.e-input-group-icon.e-date-icon::before, *.e-control-wrapper .e-input-group-icon.e-date-icon::before{
+    all: unset;
+    content: "";
+}

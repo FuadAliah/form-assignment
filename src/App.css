@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+/* @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css"; */
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
+@import "./Inputs/dataPicker.css";
+
+.App{
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form{
+    width: 540px;
+    height: auto;
+    text-align: left;
+    margin: auto;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.parent{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    flex-direction: column;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.birthday{
+    margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.parent.co{
+    margin-top: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkmark, .checkMob{
+    position: absolute;
+    right: -35px;
+    top: 67%;
+    transform: translateY(-50%);
+    background: url("./imgs/checkmark.svg") no-repeat center center;
+    width: 24px;
+    height: 24px;
+}
+
+.checkmark.birthday{
+    position: absolute;
+    right: -35px;
+    top: 5%;
+    transform: translateY(-50%);
+    background: url("./imgs/checkmark.svg") no-repeat center center;
+    width: 24px;
+    height: 24px;
+}
+
+.error{
+    font-size: 14px;
+    color: tomato;
+    margin-top: 6px;
+}
+
+label.label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #848484;
+}
+
+.age{
+    margin-bottom: 20px;
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+.age .wrong{
+    color: tomato;
+}
+
+.age .valid{
+    color: #00DE3B;
+}
+
+input,
+select{
+    width: 100%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    padding: 8px;
+    height: 48px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus, select:focus{
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(141, 83, 248, 0.25);
+    border: 1px solid rgb(141, 83, 248);
+}
+
+span.handleErrors{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: tomato;
+}
+
+select{
+    background-color: #fff;
+    background-image: url("./imgs/dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: right .5rem center;
+    background-size: 16px 12px;
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+input::-ms-clear{
+    display:none;
+}
+
+.actions{
+    margin-top: 50px;
+    display: flex;
+}
+
+.actions input{
+    width: 48%;
+    cursor: pointer;
+    border: 0;
+}
+
+.actions input:first-child{
+    background-color: blueviolet;
+    color: #fff;
+    margin-right: 4%;
+}
+
+.success-message{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #00DE3B;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+}
+
+.date-picker{
+    position: relative;
 }
